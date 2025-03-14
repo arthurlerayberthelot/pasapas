@@ -1,69 +1,69 @@
-Here’s a quick reminder of how permissions work in a Linux system :
+Voici un bref rappel du fonctionnement des permissions dans un système Linux :
 
 ***
 
-<b>There are three standard permissions</b>  for files, directories, and other objects : 
+<b>Il existe trois autorisations standard</b>  pour les fichiers, les répertoires et autres objets :  
 
-- Read or <b>R</b>, 
+- Read ou <b>R</b>, 
 
-- Write or <b>W</b>,
+- Write ou <b>W</b>,
 
-- Execute or <b>X</b>.
-
-***
-
-All objects are associated with : 
-
-- a user account (either a user or system account),
-
-- a group of accounts.
+- Execute ou <b>X</b>.
 
 ***
 
-We define the permissions for objects for :
+Tous les objets sont associés à : 
 
-- the owner or <b>u</b>.
+- un compte utilisateur (compte utilisateur ou compte système),
 
-- the owning group or <b>g</b>.
+- un groupe de comptes.
+  
+***
 
-- everyone else or <b>o</b>.
+Nous définissons les autorisations des objets pour :
+
+- le propriétaire ou <b>u</b>.
+
+- le groupe propriétaire ou <b>g</b>.
+
+- tous les autres ou <b>o</b>.
 
 ***
 
-For example, to grant all permissions (rwx) to the owner (u) of an object, we use the command :
+Par exemple, pour accorder toutes les autorisations (rwx) au propriétaire (u) d'un objet, nous utilisons la commande :
 
-````chmod u=rwx /our/file````
-
-***
-
-But there’s a simpler way. Each type of permission has its numeric equivalent :
-
-- <b>R is 4.</b>
-
-- <b>W is 2.</b>
-
-- <b>X is 1.</b>
-
-So, if we want to give read-only permission, the numerical value will be 4. If we also want to give execute permission, we just have to add the two values, making the final numerical value 5 (4+1).
+````chmod u=rwx /mon/fichier````
 
 ***
 
-Let’s say we want to do the same as before but simpler. We want to give full access to the owner (u) and no permissions to group (g) and other (o) :
+Mais il existe une méthode plus simple. Chaque type de permission a son équivalent numérique :
 
-````chmod 700 /our/file````
+- <b>R est 4.</b>
 
-The "7" corresponds to (u). It means : 4 + 2 + 1 or R + W + X. Here, we’ve granted all permissions to (u). The two 0’s are for (g) and (o) : no permissions are granted to them.
+- <b>W est 2.</b>
 
-***
+- <b>X est 1.</b>
 
-To change the owner and/or owning group of an object, we use the command :
-
-````chown "user:group" /our/file````
+Ainsi, si nous voulons donner l'autorisation de lecture seule, la valeur numérique correspondante sera 4. Si nous voulons également donner l'autorisation d'exécuter, il suffit d'additionner les deux valeurs correspondantes, ce qui donne une valeur numérique finale de 5 (4+1).
 
 ***
 
-It’s always useful to check the permissions applied to a resource with a quick ````ls -l```` in the desired directory.
+Supposons que nous voulions faire la même chose que précédemment, mais en plus simple. Nous voulons donner un accès complet au propriétaire (u) et aucune autorisation au groupe (g) et à tous les autres (o) :
+
+````chmod 700 /mon/fichier````
+
+Le « 7 » correspond à (u). Il signifie : 4 + 2 + 1 ou R + W + X. Ici, nous avons accordé toutes les permissions à (u). Les deux 0 correspondent à (g) et (o) : aucune permission ne leur est accordée.
 
 ***
 
-In a future post, I will cover the special permissions : ````SetUID```` and the infamous ````Sticky Bit````.
+Pour modifier le propriétaire et/ou le groupe propriétaire d'un objet, nous utilisons la commande :
+
+````chown "user:group" /mon/fichier````
+
+***
+
+Il est toujours utile de vérifier les permissions appliquées à une ressource à l'aide d'un rapide ````ls -l```` dans le répertoire souhaité.
+
+***
+
+Dans un prochain article, j'aborderai les autorisations spéciales : ````SetUID```` et le tristement célèbre ````Sticky Bit````.
