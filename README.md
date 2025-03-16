@@ -6,5 +6,5 @@ Des articles plus fouillés, plus théoriques, et à destination des apprentis, 
 
 # Index :
 
-[[Droits Linux 101.md]]
-[[dns-tcpdump-capture.md]]
+[Droits Linux 101.md]
+[dns-tcpdump-capture.md]
