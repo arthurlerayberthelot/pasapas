@@ -2,20 +2,24 @@ En lisant à propos des requêtes DNS, j'ai appris qu'elles étaient toutes fait
 
 UDP ne permettant pas le chiffrement des données transmises, il est très facile d'observer ces requêtes DNS en clair.
 
+***
+
 J'utilise TCPDUMP, un logiciel en ligne de commande permettant d'analyser les paquets réseaux en temps réel transitant depuis et vers mon serveur.
+
+***
 
 Pour l'installer sur mon vps Rocky Linux :
 
-'sudo dnf install tcpdump'
+```sudo dnf install tcpdump```
 
 La commande pour observer les requêtes DNS est très simple :
 
-'sudo tcpdump -i eth0 udp port 53'
+```sudo tcpdump -i eth0 udp port 53```
 
-'-i' spécifie l'interface réseau à écouter, ici 'eth0'.
+```-i``` spécifie l'interface réseau à écouter, ici ```eth0```.
 
 Depuis un autre shell, je lance une requête curl vers un site web quelconque :
 
-'curl https://www.pipegazette.com'
+```curl https://www.pipegazette.com```
 
 En direct depuis TCPDUMP, nous pouvons observer la requête DNS envoyée et les différentes informations reçues : domaine voulu, adresses IPv4 et IPv6, serveur de nom, etc.
