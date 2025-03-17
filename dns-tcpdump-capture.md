@@ -26,4 +26,4 @@ En direct depuis TCPDUMP, nous pouvons observer la requête DNS envoyée et les 
 
 ***
 
-Une solution pour chiffrer ces requêtes serait d'utiliser les protocoles DNS Over HTTPS (DoH) ou encore DNS Over TLS (DoT) - noms assez transparent - mais cela demande un client et un serveur configurés pour les utiliser.
+Une solution pour chiffrer ces requêtes serait d'utiliser les protocoles DNS Over HTTPS (DoH) ou encore DNS Over TLS (DoT) - noms assez transparents - mais cela demande un client et un serveur configurés pour les utiliser.
