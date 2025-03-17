@@ -26,6 +26,6 @@ Commande DOS permettant quatre types de requêtes :
 
 2. session (affiche vraisemblablement les sessions ouvertes sur la machine cible),
 
-3. termserver (?),
+3. termserver (affiche les connexions RDP actives),
 
 4. user (affiche le nom de l'utilisateur actuel, sa session, son ID et divers compteurs d'activité).
