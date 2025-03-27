@@ -1,13 +1,12 @@
 ## LINUX VIRTUAL NETWORKING
 
-### NAMESPACES
+### NAMESPACE
 
 Espace réseau virtuel permettant d'isoler des ressources réseaux sur une même machine. On l'utilisera par exemple avec un conteneur ou pour séparer différents types de services réseaux. On pourra créer un namespace pour un serveur web et un autre pour une base de données par exemple.
 
-1. Créer deux namespaces :
+1. Créer un namespace :
 
-``ip netns add net1``
-``ip netns add net2``
+``ip netns add web_srv``
 
 ### VETH
 
