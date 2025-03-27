@@ -1,11 +1,16 @@
-Je veux créer une copie régulière de mes notes personnelles - un coffre Obsidian présent sur mon laptop - sur un ordinateur
-servant de serveur local, un mini-pc avec Rocky Linux, utilisé pour des tests et de la virtualisation.
+Je veux créer une copie régulière de mes notes personnelles - un coffre Obsidian présent sur mon laptop - sur un serveur local, un mini-pc avec Rocky Linux, utilisé pour des tests et de la virtualisation.
+
+---
 
 Je m'y connecte régulièrement en ssh et je voudrais profiter de cette fenêtre pour copier automatiquement mes notes les plus réçentes sur le disque du serveur.
+
+---
 
 J'utiliserai pour ça la commande `rsync`, permettant entre autre de copier toutes les informations associées aux fichiers, comme le propriétaire, le groupe, les permissions, les liens, etc.
 
 Cette commande sera donc exécutée depuis le serveur à chaque connexion en ssh.
+
+---
 
 1. On crée un script bash et on y ajoute la ligne suivante :
 
@@ -34,5 +39,7 @@ Dans une commande `rsync` la source est spécifiée avant la destination.
 5. On ajoute le chemin du script à la fin du fichier `./.bashrc` de l'utilisateur de notre serveur.
 
 On peut écrire directement la ligne de commande dans `.bashrc` mais je trouve plus agréable de lire et modifier mon script indépendamment et de pouvoir le complexifier sans surcharger le `.bashrc`.
+
+---
 
 Et voilà ! Chaque fois que je me connecte en ssh à mon serveur, celui-ci exécute directement la commande `rsync` après avoir demandé le mot de passe de l'utilisateur du poste source.
