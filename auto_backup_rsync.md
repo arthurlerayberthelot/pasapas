@@ -14,7 +14,7 @@ Cette commande sera donc exécutée depuis le serveur à chaque connexion en ssh
 
 1. On crée un script bash et on y ajoute la ligne suivante :
 
-`rsync -av --update —progress client@ipclient:/chemin /chemin/destination/serveur`
+`rsync -av --update --progress client@ipclient:/chemin /chemin/destination/serveur`
 
 `-a` active le mode archive. Il signifie qu'on veut tout copier de manière récursive (toute l'arborescence du répertoire spécifiée).
 
