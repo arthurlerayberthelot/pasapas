@@ -2,7 +2,7 @@ Je veux créer une copie régulière de mes notes personnelles - un coffre Obsid
 
 ---
 
-Je m'y connecte régulièrement en ssh et je voudrais profiter de cette fenêtre pour copier automatiquement mes notes les plus réçentes sur le disque du serveur.
+Je m'y connecte régulièrement en ssh et je voudrais profiter de cette fenêtre pour copier automatiquement mes notes les plus récentes sur le disque du serveur.
 
 ---
 
