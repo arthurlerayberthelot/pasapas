@@ -1,5 +1,7 @@
 #!/bin/bash
 
+## url de base : https://commons.wikimedia.org/wiki/Category:Algeria_in_the_Bulgarian_Archives
+
 # Indiquer l'url de l'index :
 
 read -p "URL de l'index à fouiller : " index_url bin
