@@ -1,6 +1,6 @@
 ## Téléchargement des fichiers images d'une catégorie Wikimedia en utilisant l'API et JQ
 
-----
+****
 
 ```bash
 categorie="Algeria_in_the_Bulgarian_Archives"
