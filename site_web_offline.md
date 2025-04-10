@@ -14,4 +14,4 @@ On peut, par exemple, télécharger un site entier pour le consulter hors ligne 
 
 ``N`` spécifie qu'on ne veut télécharger que si les fichiers sont les plus récents. Si ces fichiers sont déjà présents sur le disque, alors le téléchargement est inutile.
 
-``e robots =off`` permet d'ignorer les directives du fichiers robots.txt utilisé par le site web pour bloquer certaines pages à l'accès.
+``e robots =off`` permet d'ignorer les directives du fichier robots.txt utilisé par le site web pour bloquer certaines pages à l'accès.
