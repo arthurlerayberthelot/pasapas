@@ -2,13 +2,13 @@
 
 ```bash
 categorie="Algeria_in_the_Bulgarian_Archives"
-apiquery="https://commons.wikimedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category:$categorie&cmlimit=max&cmtype=file&format=json&formatversion=2"
+api_query="https://commons.wikimedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category:$categorie&cmlimit=max&cmtype=file&format=json&formatversion=2"
 ```
 
 #### Extraction des noms de fichiers de la catégorie :
 
 ```bash
-curl -s $apiquery|jq -r '.query.categorymembers[].title|@uri' > /tmp/filenames.txt
+curl -s $api_query|jq -r '.query.categorymembers[].title|@uri' > /tmp/filenames.txt
 ```
 
 #### Boucle de téléchargement :
