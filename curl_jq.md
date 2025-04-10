@@ -15,9 +15,9 @@ curl -s $api_query|jq -r '.query.categorymembers[].title|@uri' > /tmp/filenames.
 
 ```bash
 media_query="https://api.wikimedia.org/core/v1/commons/file/$filename"
+getim=$(curl -s $media_query|jq -r '.original.url')
 
 while read filename; do
-getim=$(curl -s $media_query|jq -r '.original.url')
 curl -# -O $getim
 done < /tmp/filenames.txt
 ```
