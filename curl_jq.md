@@ -14,8 +14,11 @@ curl -s $apiquery|jq -r '.query.categorymembers[].title|@uri' > /tmp/filenames.t
 #### Boucle de téléchargement :
 
 ```bash
+media_query="https://api.wikimedia.org/core/v1/commons/file/$filename"
+
+```bash
 while read filename; do
-getim=$(curl -s https://api.wikimedia.org/core/v1/commons/file/$filename|jq -r '.original.url')
+getim=$(curl -s $media_query|jq -r '.original.url')
 curl -# -O $getim
 done < /tmp/filenames.txt
 ```
