@@ -1,8 +1,16 @@
+## Téléchargement des fichiers images d'une catégorie Wikimedia en utilisant l'API et JQ pour parser
+
+----
+
 ``categorie="Algeria_in_the_Bulgarian_Archives"``
+
+#### Extraction des noms de fichiers de la catégorie :
 
 ```bash
 curl -s "https://commons.wikimedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category:$categorie&cmlimit=max&cmtype=file&format=json&formatversion=2"|jq -r '.query.categorymembers[].title|@uri' > /tmp/filenames.txt
 ```
+
+#### Boucle de téléchargement :
 
 ```bash
 while read filename; do
