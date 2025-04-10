@@ -19,3 +19,7 @@ getim=$(curl -s $media_query|jq -r '.original.url')
 
 while read filename; do curl -# -O $getim; done < /tmp/filenames.txt
 ```
+***
+Autre solution que boucle while read ?
+Utiliser readarray pour transformer /tmp/filenames.txt en tableau
+puis curl $media_query_api{$filename[0],etc} ?
