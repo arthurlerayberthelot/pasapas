@@ -1,4 +1,4 @@
-## Téléchargement des fichiers images d'une catégorie Wikimedia en utilisant l'API et JQ pour parser
+## Téléchargement des fichiers images d'une catégorie Wikimedia en utilisant l'API et JQ
 
 ----
 
