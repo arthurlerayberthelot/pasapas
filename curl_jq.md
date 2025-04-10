@@ -2,7 +2,9 @@
 
 ----
 
-``categorie="Algeria_in_the_Bulgarian_Archives"``
+```bash
+categorie="Algeria_in_the_Bulgarian_Archives"
+```
 
 #### Extraction des noms de fichiers de la catégorie :
 
