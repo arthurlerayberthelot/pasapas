@@ -7,4 +7,5 @@ while read filename; do
 getim=$(curl -s https://api.wikimedia.org/core/v1/commons/file/$filename|jq -r '.original.url')
 echo $filename
 curl -# -O $getim
-done < /tmp/filenames.txt```
+done < /tmp/filenames.txt
+```
