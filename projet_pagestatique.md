@@ -8,3 +8,5 @@ Fonctionnement :
     La page est structurée en trois colonnes pour organiser les titres, le contenu et les informations de date/tags.
 
 Objectifs principaux : Facilité d'écriture, maintenance minimale et efficacité maximale.
+
+Etape 1 : Installation et config de Flask
